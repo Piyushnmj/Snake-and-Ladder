@@ -17,6 +17,8 @@
             Console.WriteLine($"Player is at position {PlayerPosition}");
 
             Random random = new Random();
+            while (PlayerPosition >= StartPosition && PlayerPosition <= WinningPosition)
+            {
                 diceRoll = random.Next(1, 7);
                 Console.WriteLine($"\nPlayer rolled number {diceRoll} on position {PlayerPosition}");
 
@@ -39,7 +41,8 @@
                         }
                         break;
                 }
-            
+            }
+
         }
     }
 }
