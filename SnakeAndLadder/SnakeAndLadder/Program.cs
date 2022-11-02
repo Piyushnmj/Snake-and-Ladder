@@ -7,15 +7,11 @@
             Console.WriteLine("Welcome to Snake and Ladder Game !!");
 
             int PlayerPosition = 0;
-            int diceRoll;
-            Random random = new Random();
 
-            Console.WriteLine("\nEnter w to Play the game");
+            Console.WriteLine("\nPress ENTER to Play the game");
             string play = Console.ReadLine();
-            Console.WriteLine($"\nPlayer is at position {PlayerPosition}");
 
-            diceRoll = random.Next(1, 6);
-            Console.WriteLine($"\nPlayer rolled number {diceRoll}");
+            Console.WriteLine($"Player is at Start position {PlayerPosition}");
         }
     }
 }
