@@ -8,10 +8,10 @@
 
             int PlayerPosition = 0;
 
-            Console.WriteLine("\nPress w to Play the game");
+            Console.WriteLine("\nPress ENTER to Play the game");
             string play = Console.ReadLine();
 
-            Console.WriteLine($"\nPlayer is at {PlayerPosition} position.");
+            Console.WriteLine($"Player is at Start position {PlayerPosition}");
         }
     }
 }
