@@ -17,7 +17,7 @@
             Console.WriteLine($"Player is at position {PlayerPosition}");
 
             Random random = new Random();
-            while (PlayerPosition >= StartPosition && PlayerPosition <= WinningPosition)
+            while (PlayerPosition < WinningPosition)
             {
                 diceRoll = random.Next(1, 7);
                 Console.WriteLine($"\nPlayer rolled number {diceRoll} on position {PlayerPosition}");
@@ -29,6 +29,11 @@
                         Console.WriteLine("Player landed on a Ladder");
                         PlayerPosition += diceRoll;
                         Console.WriteLine($"Player moves to position {PlayerPosition}");
+                        if (PlayerPosition > WinningPosition)
+                        {
+                            PlayerPosition = PlayerPosition - diceRoll;
+                            Console.WriteLine($"Player remains in position {PlayerPosition}");
+                        }
                         break;
                     case 2:
                         Console.WriteLine("Player landed on a Snake");
@@ -42,7 +47,10 @@
                         break;
                 }
             }
-
+            if (PlayerPosition == 100)
+            {
+                Console.WriteLine("==========Player Wins==========");
+            }
         }
     }
 }
